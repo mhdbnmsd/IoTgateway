@@ -1,0 +1,9 @@
+{
+  "name": "device1",
+  "services": [
+    {
+      "name": "service1",
+      "returnType": "int"
+    }
+  ]
+}
