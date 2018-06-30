@@ -4,6 +4,16 @@
     {
       "name": "service1",
       "returnType": "int"
+    },
+    {
+      "name": "service2",
+      "params": [
+        {
+          "name": "param",
+          "paramType": "String"
+        }
+      ],
+      "returnType": "String"
     }
   ]
 }
