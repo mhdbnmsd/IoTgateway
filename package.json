@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Mehdi Benmessaoud (dm_benmessaoud@esi.dz)",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "events": "^3.0.0",
     "jsonfile": "^4.0.0",
     "mqtt": "^2.18.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "require-reload": "^0.2.2"
   }
 }
