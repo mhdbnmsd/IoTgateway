@@ -3,10 +3,9 @@ const client = mqtt.connect('mqtt://localhost:1883');
 const jsonfile = require('jsonfile');
 const fs = require('fs');
 const reload = require('require-reload')(require);
+
 let serviceRegistry = require('./service-registry.js');
-
 let device = jsonfile.readFileSync('./config.json');
-
 let _topic = `device/${device.name}`;
 let _serviceTopic = `device/${device.name}/service`;
 let _deleteServiceTopic = `device/${device.name}/service/delete`;
@@ -79,6 +78,7 @@ client.on('message', (topic, message) => {
         deviceController.removeService(message.serviceName);
     }else if (reg.test(topic)){
         let service = serviceController.getServiceName(topic);
+        console.log(service);
         serviceController.invokeSerivce(service, message).then((result) => {
             client.publish(`service/${device.name}/${service}/up`, JSON.stringify(result));
         });
@@ -92,8 +92,12 @@ process.on('SIGINT', (code) => {
     }));
 });
 
-
-
 serviceController.getServiceName = (topic) => {
     return topic.split('/')[2];
 };
+
+
+
+
+
+

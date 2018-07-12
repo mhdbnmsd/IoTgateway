@@ -44,6 +44,26 @@
         }
       ],
       "returnType": "String"
+    },
+    {
+      "name": "service6",
+      "params": [
+        {
+          "name": "param",
+          "paramType": "String"
+        }
+      ],
+      "returnType": "String"
+    },
+    {
+      "name": "service8",
+      "params": [
+        {
+          "name": "param",
+          "paramType": "String"
+        }
+      ],
+      "returnType": "String"
     }
   ]
 }

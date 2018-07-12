@@ -1,13 +1,21 @@
 serviceRegistry = {};
 module.exports = serviceRegistry;
+const net = require('net');
+const socketClient = net.createConnection({path: '/tmp/data.sock'}, () => {
+    console.log('connected to socket');
+});
+
+/*socketClient.on('data', (data) => {
+    data = `${data}`.split(',');
+    console.log(data);
+});*/
 
 serviceRegistry.service1 = (params) => {
     return new Promise((resolve) => {
-        // Implement your shit
-        /* Example */
-        // Jib les données men ZigBee wala Ma3labalich
-        let result = params.a * params.b ;
-        resolve(result);
+        socketClient.on('data', (data) => {
+            data = `${data}`.split(',');
+            resolve(data);
+        });
     });
 };
 
@@ -43,3 +51,22 @@ serviceRegistry.service5 = (params) => {
         resolve(result);
    });
 };
+
+serviceRegistry.service6 = (params) => {
+    return new Promise((resolve, reject) => {
+        // Write your code here; 
+        let result = {};
+        resolve(result);
+   });
+};
+
+
+serviceRegistry.service8 = (params) => {
+    return new Promise((resolve, reject) => {
+        // Write your code here; 
+        let result = params.a + params.b + params.c;
+        resolve(result);
+   });
+};
+
+
