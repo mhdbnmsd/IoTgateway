@@ -1,0 +1,10 @@
+certifi==2018.4.16
+chardet==3.0.4
+digi-xbee==1.1.1
+idna==2.7
+pyserial==3.4
+requests==2.19.1
+six==1.11.0
+socketIO-client==0.7.2
+urllib3==1.23
+websocket-client==0.48.0

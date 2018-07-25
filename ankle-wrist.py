@@ -20,7 +20,7 @@ def main():
     
     socketServer = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     socketServer.bind(data)
-    socketServer.listen(1)
+    socketServer.listen(10)
     socketConnection, _ = socketServer.accept()
 
     try:
@@ -37,8 +37,8 @@ def main():
         device.add_data_received_callback(data_receive_callback)
         print("Waiting for data...\n")
         input()
-    except EOFError: 
-        pass
+    except Error:
+        main()
     finally:
         if device is not None and device.is_open():
             device.close()

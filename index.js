@@ -80,6 +80,7 @@ client.on('message', (topic, message) => {
         let service = serviceController.getServiceName(topic);
         console.log(service);
         serviceController.invokeSerivce(service, message).then((result) => {
+            console.log(result);
             client.publish(`service/${device.name}/${service}/up`, JSON.stringify(result));
         });
     }

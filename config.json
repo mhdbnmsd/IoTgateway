@@ -2,68 +2,24 @@
   "name": "device1",
   "services": [
     {
-      "name": "service1",
-      "returnType": "int"
+      "name": "getAnkleData",
+      "returnType": "JsonObject"
     },
     {
-      "name": "service2",
-      "params": [
-        {
-          "name": "param",
-          "paramType": "String"
-        }
-      ],
-      "returnType": "String"
+      "name": "getWristData",
+      "returnType": "JsonObject"
     },
     {
-      "name": "service3",
-      "params": [
-        {
-          "name": "param",
-          "paramType": "String"
-        }
-      ],
-      "returnType": "String"
+      "name": "getAnkleAcceleration",
+      "returnType": "JsonObject"
     },
     {
-      "name": "service4",
-      "params": [
-        {
-          "name": "param",
-          "paramType": "String"
-        }
-      ],
-      "returnType": "String"
+      "name": "getChestData",
+      "returnType": "JsonObject"
     },
     {
-      "name": "service5",
-      "params": [
-        {
-          "name": "param",
-          "paramType": "String"
-        }
-      ],
-      "returnType": "String"
-    },
-    {
-      "name": "service6",
-      "params": [
-        {
-          "name": "param",
-          "paramType": "String"
-        }
-      ],
-      "returnType": "String"
-    },
-    {
-      "name": "service8",
-      "params": [
-        {
-          "name": "param",
-          "paramType": "String"
-        }
-      ],
-      "returnType": "String"
+      "name": "getChestAcceleration",
+      "returnType": "JsonObject"
     }
   ]
 }
