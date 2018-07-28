@@ -6,7 +6,7 @@ data = '/tmp/chest.sock'
 
 
 # TODO: Replace with the serial port where your local module is connected to.
-PORT = "/dev/tty.usbmodem1421"
+PORT = "/dev/tty.usbmodem47"
 # TODO: Replace with the baud rate of your local module.
 BAUD_RATE = 9600
 
